@@ -1,0 +1,25 @@
+{
+  "name": "backwater",
+  "version": "0.0.0",
+  "description": "backwater",
+  "main": "app.js",
+  "dependencies": {
+    "async": "~0.2.10",
+    "express": "~3.4.8",
+    "socket.io": "~0.9.16"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wmoai/backwater.git"
+  },
+  "author": "wmoai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wmoai/backwater/issues"
+  },
+  "homepage": "https://github.com/wmoai/backwater"
+}
