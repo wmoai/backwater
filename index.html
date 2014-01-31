@@ -5,19 +5,47 @@
 <script src="/client.js"></script>
 <style>
 #field {
-  width:400px;
-  height:300px;
-  background-color:whitesmoke;
+  width:2000px;
+  height:1800px;
+  background-color:lightgray;
   position:relative;
 }
 .chara {
   width:10px;
   height:10px;
   position:absolute;
+  background-color:blue;
+}
+.chara .hp {
+  width:50px;
+  height:2px;
+  position:relative;
+  top:-10px;
+  left:-20px;
   background-color:red;
+}
+.chara .hp .remain {
+  width:50px;
+  height:2px;
+  position:relative;
+  background-color:green;
+}
+
+.chara .range {
+  position:relative;
+  background-color:orange;
+  opacity: 0.3;
 }
 </style>
 
 <body>
 <div id="field"></div>
+<div id="parts" style="display:none;">
+  <div id="chara" class="chara">
+    <div class="hp">
+      <div class="remain"></div>
+    </div>
+    <div class="range"></div>
+  </div>
+</div>
 </body>
