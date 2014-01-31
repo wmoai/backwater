@@ -44,9 +44,9 @@ $(function() {
 
   socket.on('anyone attack', function (data) {
     sethp(data);
-    $('.chara[data-sid='+data.id+'] > .range').css({opacity: 0.3});
+    $('.chara[data-sid='+data.from+'] > .range').css({opacity: 0.3});
     setTimeout(function() {
-      $('.chara[data-sid='+data.id+'] > .range').css({opacity: 0.1});
+      $('.chara[data-sid='+data.from+'] > .range').css({opacity: 0.1});
     },100);
   });
 

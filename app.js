@@ -9,10 +9,13 @@ app.use(express.static(__dirname + '/public'));
 
 server.listen(3000);
 
+var sec = 1;
 app.get('/', function (req, res) {
+  if (req.query.sec) {
+    sec = req.query.sec;
+  }
   res.sendfile(__dirname + '/index.html');
 });
-
 
 var charas = new Array();
 
@@ -24,7 +27,7 @@ var Chara = function(socket) {
   };
   this.moving = false;
   this.v = 100;
-  this.range = 100;
+  this.range = 100 * sec;
   this.hp = 200;
   this.maxhp = 200;
   this.str = 10;
@@ -81,6 +84,7 @@ var Chara = function(socket) {
             id: c.socket.id
             , maxhp: c.maxhp
             , hp: c.hp
+            , from: self.socket.id
           });
         }
       }
