@@ -44,12 +44,15 @@ $(function() {
 
   socket.on('anyone attack', function (data) {
     sethp(data);
+    $('.chara[data-sid='+data.id+'] > .range').css({opacity: 0.3});
+    setTimeout(function() {
+      $('.chara[data-sid='+data.id+'] > .range').css({opacity: 0.1});
+    },100);
   });
 
   socket.on('die', function (data) {
     $('.chara[data-sid='+data.id+']').remove();
   });
-
 
 });
 
