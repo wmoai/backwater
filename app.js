@@ -9,6 +9,7 @@ var express = require('express')
   , io = require('socket.io').listen(server)
 ;
 
+// comment
 app.use(express.static(__dirname + '/public'));
 
 server.listen(3030);
