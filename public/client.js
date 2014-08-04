@@ -1,10 +1,12 @@
 $(function() {
-  var socket = io.connect('http://192.168.24.85:3000');
+  var socket = io.connect('http://192.168.24.85:3030');
+  var sid;
 
   var sethp = function(data, chara) {
     if (!chara) {
       chara = $('.chara[data-sid='+data.id+']');
     }
+    sid = data.id;
     var baseWidth = chara.find('.hp').width();
     chara.find('.hp > .remain').css({
       width: data.hp / data.maxhp * baseWidth

@@ -7,7 +7,7 @@ var express = require('express')
 
 app.use(express.static(__dirname + '/public'));
 
-server.listen(3000);
+server.listen(3030);
 
 var sec = 1;
 app.get('/', function (req, res) {
